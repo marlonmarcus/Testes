@@ -7,14 +7,27 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <form action="cadastro.js" method="post">
-   <p><label for="inome">Nome:</label>
-     <input type="text" name="nome" id="inome" required></p>
-   <p><label for="isen">Senha:</label>
-     <input type="password" name="sen" id="isen" required></p>
-     <p> <label for="idata">Data de nascimento:</label> <input type="date" name="data" id="idata"></p>
+  <form action="cadastro.js" method="get" >
+    <fieldset>
+      <legend>Sexo</legend>
+      <input type="radio" name="sexo" id="imas" value="M">
+      <label for="imas">Masculino</label> <br>
+      <input type="radio" name="sexo" id="ifem" value="F">
+      <label for="ifem">Feminino</label> <br>
+    </fieldset>
+    <fieldset>
+      <legend>Esportes Favoritos</legend>
+      <input type="checkbox" name="esfut" id="ifut">
+      <label for="ifut">Futebol</label> <br>
+      <input type="checkbox" name="esbas" id="ibas">
+      <label for="ibas">Basquete</label> <br>
+      <input type="checkbox" name="esten" id="iten">
+      <label for="iten">Tênis</label> <br>
+      <input type="checkbox" name="esnat" id="inat">
+      <label for="inat">Natação</label>
+    </fieldset>
+    <br>
     <input type="submit" value="Enviar">
-    <input type="reset" value="Limpar">
   </form>
 
   <script>
