@@ -8,34 +8,44 @@
 </head>
 <body>
   <form action="cadastro.js" method="get" >
-    <fieldset>
-      <legend>Sexo</legend>
-      <input type="radio" name="sexo" id="imas" value="M">
-      <label for="imas">Masculino</label> <br>
-      <input type="radio" name="sexo" id="ifem" value="F">
-      <label for="ifem">Feminino</label> <br>
-    </fieldset>
-    <fieldset>
-      <legend>Esportes Favoritos</legend>
-      <input type="checkbox" name="esfut" id="ifut">
-      <label for="ifut">Futebol</label> <br>
-      <input type="checkbox" name="esbas" id="ibas">
-      <label for="ibas">Basquete</label> <br>
-      <input type="checkbox" name="esten" id="iten">
-      <label for="iten">Tênis</label> <br>
-      <input type="checkbox" name="esnat" id="inat">
-      <label for="inat">Natação</label>
-    </fieldset>
-    <br>
-    <input type="submit" value="Enviar">
+    <p>
+      <label for="iest">Estado</label>
+      <select name="estado" id="iest">
+
+      <optgroup label="Região Nordeste">
+        <option value="BA">Bahia</option>
+        <option value="MA">Maranhão</option>
+        <option value="PE">Pernambuco</option>
+      </optgroup>
+    
+      <optgroup label="Região Centro-Oeste">
+          <option value="SP">São-Paulo</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="PR">Paraná</option>
+      </optgroup>
+    </select>
+    
+    </p>
+    <p>
+      <label for="iprof">Profissão: </label>
+      <input type="text" name="prof" id="iprof" list="listprof">
+      <datalist id="listprof">
+        <option value="ADM">Administrador</option>
+        <option value="DEV">Desenvolvedor</option>
+        <option value="PROF">Professor</option>
+        <option value="CONT">Contabilista</option>
+      </datalist>
+    </p>
+    <p>
+      <label for="itipo">Tipo</label>
+      <input type="text" name="tipo" id="itipo" list="listtipo">
+      <datalist id="listtipo">
+        <option value="FULL">FULL STACK DEVELOPER</option>
+        <option value="BACK">BACK END DEVELOPER</option>
+        <option value="FRONT">FRONT END DEVELOPER</option>
+      </datalist>
+    </p>
   </form>
 
-  <script>
-    var n1 = Number(prompt('Digite um número: '))
-    var n2 = Number(prompt ('Digite outro número: '))
-    var s = n1 + n2
-    alert(`A soma dos dois números é igual a ${s}`)
-  </script>
-  
 </body>
 </html>
